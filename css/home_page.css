@@ -1,0 +1,78 @@
+
+#home-page {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr minmax(400px, 1050px) 1fr;
+}
+
+#parallax-background {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    background: url("../img/portrait.png") no-repeat bottom center;
+    background-size: 80% 100%;
+    background-position-x: 60%;
+    width: min(100%, 1050px);
+    aspect-ratio: 16/9;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    font-size: 40px;
+}
+
+#parallax-background a {
+    color: black;
+}
+
+#parallax-background a:hover {
+    transition: ease-in-out 0.3s;
+    color: dodgerblue;
+}
+
+#latest-projects {
+    grid-row: 2/3;
+    grid-column: 1/4;
+    background-color: #FAFAFA;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+#latest-projects a {
+    grid-row: 1/2;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+#latest-projects a:hover {
+    box-shadow: gray 0 3px 3px 1px;
+}
+
+#latest-projects a p {
+    padding: 10px;
+    border: 0;
+    color: black;
+}
+
+#latest-projects a img {
+    padding: 20px;
+    margin: 5%;
+    border-radius: 5px;
+    width: 90%;
+    aspect-ratio: 16/9;
+}
+
+@media (max-width: 800px) {
+    #latest-projects {
+        grid-template-columns: 1fr 1fr 0;
+    }
+
+    #last_project {
+        display: none;
+    }
+}
